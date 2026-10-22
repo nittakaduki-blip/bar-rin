@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" role="img" aria-label="BAR 稟のカウンター">
+  <defs>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/><feFlood flood-color="#ffc16d" flood-opacity=".88"/><feComposite in2="blur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <image href="interior-counter.jpg" width="1448" height="1086"/>
+  <rect x="681" y="337" width="89" height="100" rx="24" fill="#1f150f" opacity=".92" filter="url(#soft)"/>
+  <text x="725" y="424" text-anchor="middle" fill="#f8e1b4" font-family="'Yu Mincho','YuMincho','Hiragino Mincho ProN','Noto Serif CJK JP','Noto Serif JP',serif" font-size="79" font-weight="600" filter="url(#goldGlow)">&#x7A1F;</text>
+</svg>

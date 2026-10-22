@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" role="img" aria-label="BAR 稟の店内全景">
+  <defs>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+    <filter id="iceGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="6" result="blur"/><feFlood flood-color="#82edff" flood-opacity=".95"/><feComposite in2="blur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <image href="interior-main.jpg" width="1448" height="1086"/>
+  <rect x="709" y="363" width="83" height="91" rx="20" fill="#554c3c" opacity=".88" filter="url(#soft)"/>
+  <text x="751" y="440" text-anchor="middle" fill="#d9fbff" font-family="'Yu Mincho','YuMincho','Hiragino Mincho ProN','Noto Serif CJK JP','Noto Serif JP',serif" font-size="64" font-weight="600" filter="url(#iceGlow)">&#x7A1F;</text>
+  <rect x="247" y="338" width="58" height="75" rx="4" fill="#e6ded0" opacity=".98"/>
+  <text x="276" y="399" text-anchor="middle" fill="#292016" font-family="'Yu Mincho','YuMincho','Hiragino Mincho ProN','Noto Serif CJK JP','Noto Serif JP',serif" font-size="49" font-weight="600">&#x7A1F;</text>
+</svg>

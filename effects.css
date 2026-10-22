@@ -1,0 +1,399 @@
+:root {
+  --display-jp: "Kaisei Decol", "Noto Serif JP", serif;
+  --hand-jp: "Kaisei Decol", "Noto Serif JP", serif;
+  --rin-gold: #d5ae67;
+  --rin-cyan: #44e4df;
+}
+
+/* Type rhythm: angular labels, soft Japanese display type and fine serif text. */
+.section-index span { border-radius: 0; transform: rotate(45deg); }
+.section-index { font-family: "Bodoni Moda", serif; }
+.overline { font-family: "Bodoni Moda", serif; }
+.intro h2,
+.horse h2,
+.feature-content h2,
+.gallery h2,
+.system h2,
+.faq h2,
+.access h2,
+.contact h2 { font-family: var(--display-jp); }
+.feature-list h3,
+.system-details h3 { font-family: var(--hand-jp); }
+
+/* Keep the failing-light mood without drawing a literal fluorescent tube. */
+.hero-overlay { animation: room-current 10.5s infinite; }
+.hero-label {
+  display: inline-flex;
+  padding: 13px 24px;
+  border: 1px solid rgba(68, 228, 223, .85);
+  background: rgba(4, 12, 15, .55);
+  color: #e9ffff;
+  font-family: "Bodoni Moda", serif;
+  font-size: 11px;
+  letter-spacing: .38em;
+  clip-path: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);
+  box-shadow: 0 0 22px rgba(68, 228, 223, .17);
+  animation: label-current 8.3s infinite;
+}
+.hero-logo { margin-top: 32px; }
+.hero h1 {
+  margin-top: 10px;
+  font-family: var(--display-jp);
+  font-weight: 500;
+  letter-spacing: .035em;
+}
+.hero-serif { font-family: var(--display-jp); }
+.hero-kaku {
+  display: inline-block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: .09em;
+  transform: skewX(-4deg);
+}
+.neon-copy {
+  display: inline-block;
+  position: relative;
+  color: var(--rin-cyan);
+  font-family: var(--hand-jp);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-shadow: 0 0 18px rgba(68, 228, 223, .45);
+  animation: copy-flicker 11s infinite;
+}
+.neon-copy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -.04em;
+  bottom: -.06em;
+  height: 2px;
+  background: var(--rin-cyan);
+  box-shadow: 0 0 12px rgba(68, 228, 223, .7);
+}
+.neon-mark { animation: sign-buzz 9.4s infinite; }
+.hero-line { animation: border-current 8.6s infinite; }
+.hero-vertical {
+  position: absolute;
+  z-index: 2;
+  top: 21%;
+  right: clamp(28px, 4.4vw, 72px);
+  height: 315px;
+  margin: 0;
+  padding: 19px 13px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border-right: 1px solid rgba(68, 228, 223, .5);
+  border-left: 1px solid rgba(213, 174, 103, .32);
+  color: rgba(255, 255, 255, .76);
+  font: 500 14px/1.8 var(--display-jp);
+  letter-spacing: .18em;
+  text-shadow: 0 2px 12px #000;
+}
+.hero-vertical b { color: var(--rin-cyan); font-size: 17px; font-weight: 500; }
+.hero-vertical small {
+  margin-left: 12px;
+  color: var(--rin-gold);
+  font: 600 7px/1 "Bodoni Moda", serif;
+  letter-spacing: .22em;
+}
+
+/* Vertical writing creates a quiet pause between editorial blocks. */
+.intro { position: relative; overflow: hidden; }
+.intro::after {
+  content: "RIN";
+  position: absolute;
+  right: -1vw;
+  bottom: -10vw;
+  color: rgba(20, 170, 166, .035);
+  font: 600 32vw/1 "Bodoni Moda", serif;
+  pointer-events: none;
+}
+.intro-layout {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) 92px;
+  gap: clamp(38px, 6vw, 95px);
+}
+.intro h2 { font-family: var(--hand-jp); }
+.vertical-manifesto {
+  height: 390px;
+  margin: 0;
+  padding: 24px 19px;
+  align-self: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border: 1px solid rgba(20, 170, 166, .48);
+  color: #323a3c;
+  background: rgba(255, 255, 255, .38);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  font: 500 15px/2 var(--hand-jp);
+  letter-spacing: .16em;
+}
+.vertical-manifesto b { color: #087f7c; font-size: 20px; }
+.vertical-manifesto small {
+  margin-left: 13px;
+  color: #8b7550;
+  font: 600 7px/1 "Bodoni Moda", serif;
+  letter-spacing: .2em;
+}
+.intro-tags span { background: rgba(255, 255, 255, .58); font-family: var(--hand-jp); }
+
+/* Audience cards use the reference site's clarity, with original Bar Rin copy. */
+.recommend {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(90px, 11vw, 150px);
+  padding-top: clamp(55px, 7vw, 90px);
+  border-top: 1px solid rgba(20, 23, 25, .16);
+}
+.recommend-heading {
+  display: grid;
+  grid-template-columns: minmax(250px, .8fr) minmax(300px, 1.2fr);
+  gap: 18px 8vw;
+  align-items: end;
+  margin-bottom: 44px;
+}
+.recommend-heading .overline { grid-column: 1; margin: 0; }
+.recommend-heading h3 {
+  grid-column: 1;
+  margin: 0;
+  color: var(--ink);
+  font: 700 clamp(27px, 3vw, 42px)/1.45 var(--display-jp);
+  letter-spacing: .07em;
+}
+.recommend-heading > p:last-child {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  max-width: 560px;
+  margin: 0;
+  color: #62686a;
+  font-size: 12px;
+  line-height: 2;
+}
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.recommend-grid article {
+  min-height: 190px;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 22px;
+  padding: clamp(25px, 3vw, 39px);
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(68, 228, 223, .08), transparent 45%),
+    #101a20;
+  border: 1px solid rgba(20, 170, 166, .42);
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+.recommend-grid article:last-child { grid-column: 1 / -1; min-height: 155px; }
+.recommend-grid article > span {
+  color: var(--rin-cyan);
+  font: 600 29px/1 "Bodoni Moda", serif;
+  text-shadow: 0 0 15px rgba(68, 228, 223, .36);
+}
+.recommend-grid h4 {
+  margin: 0 0 12px;
+  font: 600 17px/1.65 var(--display-jp);
+  letter-spacing: .045em;
+}
+.recommend-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, .57);
+  font: 400 11px/1.95 "Noto Sans JP", sans-serif;
+}
+
+/* Angular cards against soft, conversational typography. */
+.feature-list article {
+  position: relative;
+  margin-top: 10px;
+  padding: 25px 24px;
+  border: 0;
+  background: linear-gradient(105deg, rgba(68, 228, 223, .085), rgba(255, 255, 255, .025));
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+.feature-list article:last-child { border: 0; }
+.feature-no {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(68, 228, 223, .45);
+  font-family: "Bodoni Moda", serif;
+  transform: rotate(-4deg);
+}
+.feature-list h3 { font-size: 20px; }
+.horse-quote {
+  width: fit-content;
+  padding: 20px 26px;
+  border: 1px solid rgba(20, 170, 166, .28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .45);
+}
+.gallery-grid figcaption span {
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+  font-family: "Bodoni Moda", serif;
+}
+
+/* Price board: based on the supplied black / turquoise / gold menu artwork. */
+.system {
+  position: relative;
+  overflow: hidden;
+  color: #f8f4ea;
+  background:
+    linear-gradient(115deg, rgba(3, 9, 12, .98), rgba(5, 16, 18, .94)),
+    url("./assets/menu-board.jpg") center / cover;
+}
+.system::before {
+  content: "♞";
+  position: absolute;
+  right: -4vw;
+  bottom: -15vw;
+  color: rgba(68, 228, 223, .035);
+  font: 70vw/1 serif;
+  pointer-events: none;
+}
+.system::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(213, 174, 103, .28);
+  clip-path: polygon(26px 0, calc(100% - 26px) 0, 100% 26px, 100% calc(100% - 26px), calc(100% - 26px) 100%, 26px 100%, 0 calc(100% - 26px), 0 26px);
+  pointer-events: none;
+}
+.system > * { position: relative; z-index: 1; }
+.system .section-index { color: rgba(255, 255, 255, .48); }
+.system-title>p:last-child { color: rgba(255, 255, 255, .62); }
+.system h2 { color: #fff; }
+.price-panel {
+  position: relative;
+  padding: clamp(25px, 4vw, 52px);
+  color: #fff;
+  border: 1px solid rgba(213, 174, 103, .78);
+  background: linear-gradient(145deg, rgba(9, 22, 25, .98), rgba(2, 7, 9, .96));
+  box-shadow: inset 0 0 0 6px rgba(213, 174, 103, .04), 18px 18px 0 rgba(68, 228, 223, .06);
+  clip-path: polygon(19px 0, calc(100% - 19px) 0, 100% 19px, 100% calc(100% - 19px), calc(100% - 19px) 100%, 19px 100%, 0 calc(100% - 19px), 0 19px);
+}
+.price-panel::before,
+.price-panel::after {
+  content: "✦";
+  position: absolute;
+  color: var(--rin-cyan);
+  font-size: 14px;
+  text-shadow: 0 0 10px rgba(68, 228, 223, .65);
+}
+.price-panel::before { top: 12px; left: 17px; }
+.price-panel::after { right: 17px; bottom: 12px; }
+.price-kicker {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--rin-gold);
+  font-family: "Bodoni Moda", serif;
+  letter-spacing: .23em;
+}
+.price-kicker span { font-size: 10px; }
+.price-kicker b { font-size: 15px; font-weight: 500; }
+.panel-top { border-color: rgba(213, 174, 103, .35); }
+.panel-top span { color: var(--rin-cyan); }
+.panel-top strong { font-family: var(--hand-jp); }
+.panel-row { border-color: rgba(213, 174, 103, .22); }
+.panel-row small { color: rgba(255, 255, 255, .44); }
+.panel-row b { color: #fff; }
+.panel-row>strong {
+  color: var(--rin-gold);
+  font-family: "Bodoni Moda", serif;
+  text-shadow: 0 0 25px rgba(213, 174, 103, .18);
+}
+.panel-row>strong small { color: #fff; }
+.panel-note { color: rgba(255, 255, 255, .5); }
+.system-details { border-color: rgba(213, 174, 103, .32); }
+.system-details article { background: rgba(2, 8, 10, .5); }
+.system-details article+article { border-color: rgba(213, 174, 103, .25); }
+.system-details span { color: var(--rin-cyan); }
+.system-details p { color: rgba(255, 255, 255, .56); }
+
+.faq summary { font-family: var(--hand-jp); }
+.access dl>div { transition: padding .25s, background .25s; }
+.access dl>div:hover { padding-left: 12px; background: rgba(20, 170, 166, .05); }
+.contact h2 { font-family: var(--hand-jp); }
+
+@keyframes room-current {
+  0%, 37%, 39%, 64%, 66%, 100% { opacity: 1; }
+  38%, 65% { opacity: .82; }
+  38.4%, 65.35% { opacity: .94; }
+}
+@keyframes label-current {
+  0%, 28%, 30%, 31%, 80%, 82%, 100% { opacity: 1; box-shadow: 0 0 22px rgba(68, 228, 223, .17); }
+  29%, 30.5%, 81% { opacity: .46; box-shadow: none; }
+}
+@keyframes sign-buzz {
+  0%, 43%, 45%, 46%, 72%, 74%, 100% { opacity: 1; filter: none; }
+  44%, 45.4%, 73% { opacity: .3; filter: saturate(.4); }
+}
+@keyframes copy-flicker {
+  0%, 63%, 65%, 66%, 67.5%, 69%, 100% { opacity: 1; text-shadow: 0 0 18px rgba(68, 228, 223, .45); }
+  64%, 66.5%, 68% { opacity: .42; text-shadow: none; }
+}
+@keyframes border-current {
+  0%, 31%, 33%, 66%, 68%, 100% { border-color: rgba(60, 224, 218, .32); box-shadow: inset 0 0 40px rgba(60, 224, 218, .06); }
+  32%, 67% { border-color: rgba(60, 224, 218, .08); box-shadow: none; }
+}
+
+@media (max-width: 900px) {
+  .hero-label { padding: 10px 14px; font-size: 8px; letter-spacing: .27em; }
+  .hero-content { max-width: calc(100% - 50px); }
+  .hero h1 { font-size: clamp(37px, 10vw, 58px); line-height: 1.34; }
+  .hero-kaku { letter-spacing: .02em; }
+  .hero-vertical {
+    top: 170px;
+    right: 11px;
+    height: 250px;
+    padding: 14px 7px;
+    font-size: 10px;
+    line-height: 1.55;
+    letter-spacing: .1em;
+  }
+  .hero-vertical b { font-size: 12px; }
+  .hero-vertical small { margin-left: 7px; font-size: 5px; }
+  .intro-layout { grid-template-columns: 1fr; }
+  .vertical-manifesto { width: 150px; height: 320px; justify-self: center; margin-top: 12px; }
+  .recommend-heading { grid-template-columns: 1fr; gap: 12px; }
+  .recommend-heading .overline,
+  .recommend-heading h3,
+  .recommend-heading > p:last-child { grid-column: 1; grid-row: auto; }
+  .recommend-heading > p:last-child { margin-top: 8px; }
+  .recommend-grid { grid-template-columns: 1fr; }
+  .recommend-grid article,
+  .recommend-grid article:last-child {
+    grid-column: auto;
+    min-height: 0;
+    grid-template-columns: 44px 1fr;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+  .recommend-grid article > span { font-size: 24px; }
+  .recommend-grid h4 { font-size: 15px; }
+  .feature-list article { grid-template-columns: 42px 1fr; padding: 22px 16px; }
+  .system { grid-template-columns: 1fr; }
+  .system::after { inset: 9px; }
+  .price-panel { padding: 30px 21px; box-shadow: 9px 9px 0 rgba(68, 228, 223, .06); }
+  .price-kicker b { font-size: 12px; }
+  .panel-row { gap: 20px; }
+  .panel-row>strong { font-size: 34px; }
+  .system-details { grid-template-columns: 1fr; }
+  .system-details article+article { border-left: 0; border-top: 1px solid rgba(213, 174, 103, .25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-overlay,
+  .hero-label,
+  .neon-mark,
+  .neon-copy,
+  .hero-line { animation: none !important; }
+}

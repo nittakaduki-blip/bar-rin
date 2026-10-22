@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" role="img" aria-label="BAR 稟のソファ席">
+  <defs>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="goldGlow" x="-90%" y="-90%" width="280%" height="280%"><feGaussianBlur stdDeviation="6" result="blur"/><feFlood flood-color="#ffe4a1" flood-opacity=".9"/><feComposite in2="blur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <image href="interior-lounge.jpg" width="1448" height="1086"/>
+  <rect x="591" y="351" width="82" height="91" rx="20" fill="#151514" opacity=".94" filter="url(#soft)"/>
+  <text x="632" y="428" text-anchor="middle" fill="#fff0c7" font-family="'Yu Mincho','YuMincho','Hiragino Mincho ProN','Noto Serif CJK JP','Noto Serif JP',serif" font-size="63" font-weight="600" filter="url(#goldGlow)">&#x7A1F;</text>
+</svg>
